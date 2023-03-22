@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainmenuconstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/your_plant_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_plant_title"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/plant_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/plant_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/plant_hint"
+            android:inputType="textShortMessage|text"
+            android:minHeight="48dp"
+            android:text="@string/plant_type_text"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/done_button_plant_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/your_plant_text" />
+
+        <TextView
+            android:id="@+id/plant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/plant_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/plant_type" />
+
+        <Button
+            android:id="@+id/done_button_plant_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/done_button_plant_type_text"
+            app:layout_constraintBottom_toTopOf="@+id/change_temperature_text"
+            app:layout_constraintEnd_toStartOf="@+id/change_plant_name_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plant_type" />
+
+        <Button
+            android:id="@+id/done_button_plant_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/done_button_plant_temperature_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/change_plant_temperature"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+
+        <Button
+            android:id="@+id/change_plant_name_button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:layout_marginBottom="68dp"
+            android:text="@string/change_plan_name_button_text"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/change_temperature_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/done_button_plant_type"
+            app:layout_constraintTop_toBottomOf="@+id/plant_type" />
+
+        <Button
+            android:id="@+id/change_plant_temperature"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/change_plant_temperature_button_text"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/done_button_plant_temperature"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+
+        <EditText
+            android:id="@+id/editTextNumberDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="4"
+            android:hint="@string/temperature_text"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:text="@string/zero_placeholder_text"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/done_button_plant_temperature"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/change_temperature_text" />
+
+        <TextView
+            android:id="@+id/edit_temperature_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/done_button_plant_temperature"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/change_temperature_text" />
+
+        <TextView
+            android:id="@+id/change_temperature_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_temperature_text_string"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextNumberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/done_button_plant_type" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

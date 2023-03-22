@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainmenuconstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_menu"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.164" />
+
+        <Button
+            android:id="@+id/camera_button_menu"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="@string/kamera"
+            app:layout_constraintBottom_toTopOf="@+id/temperature_button_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/plant_button_menu"
+            app:layout_constraintTop_toBottomOf="@+id/menu_text" />
+
+        <Button
+            android:id="@+id/plant_button_menu"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="@string/moja_roslina"
+            app:layout_constraintBottom_toTopOf="@+id/watering_button_menu"
+            app:layout_constraintEnd_toStartOf="@+id/camera_button_menu"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu_text" />
+
+        <Button
+            android:id="@+id/temperature_button_menu"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="@string/temperature_menu_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/watering_button_menu"
+            app:layout_constraintTop_toBottomOf="@+id/camera_button_menu" />
+
+        <Button
+            android:id="@+id/watering_button_menu"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="@string/podlewanie"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/temperature_button_menu"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plant_button_menu" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

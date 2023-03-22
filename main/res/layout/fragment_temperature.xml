@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.navigation.TemperatureFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/temperatureConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/temperature_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temperature_sensor_text"
+            android:textAlignment="textStart"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/temperature_reading_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/temperature_reading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temperature_reading_text"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/is_temp_good"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/temperature_title" />
+
+        <TextView
+            android:id="@+id/is_temp_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/is_temperature_good_text"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/temperature_good_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/temperature_reading_text" />
+
+        <TextView
+            android:id="@+id/temperature_good_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/is_temp_good" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
